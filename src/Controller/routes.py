@@ -15,8 +15,8 @@ def pdf(pdf_path):
         for key in parameters[test]["parameters"]:
             results["parameters"][key]={
                 "value":None,
-                "upper_limit":limits[key][results["gender"]]["upper"],
-                "lower_limit":limits[key][results["gender"]]["lower"],
+                "upperLimit":limits[key][results["gender"]]["upper"],
+                "lowerLimit":limits[key][results["gender"]]["lower"],
                 "unit":limits[key]["unit"]
             }
     for test in parameters:

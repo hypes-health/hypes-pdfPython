@@ -1,8 +1,8 @@
 def normalizeResults(results):
     for param in results["parameters"]:
         if results["parameters"][param]["value"] is not None:
-            lower_limit = results["parameters"][param]["lower_limit"]
-            upper_limit = results["parameters"][param]["upper_limit"]
+            lower_limit = results["parameters"][param]["lowerLimit"]
+            upper_limit = results["parameters"][param]["upperLimit"]
             value = results["parameters"][param]["value"]
             if lower_limit in [-1, None] and upper_limit in [-1, None]:
                 continue
