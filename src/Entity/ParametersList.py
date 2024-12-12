@@ -80,6 +80,7 @@ parameters={
       "Phosphorus":["Phosphorus"],
       "SGPT":["SGPT"],
       "SGOT":["SGOT"],
+      "eGFR": ["eGFR", "Estimated Glomerular Filtration", "Filtration"],
       "Sodium":["Sodium"],
       "Potassium":["Potassium"],
       "Chloride":["Chloride"],
