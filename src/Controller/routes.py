@@ -3,14 +3,16 @@ from Services.GenderService import getGender
 from Services.AgeService import getAge
 from Entity.ParametersList import parameters
 from Entity.limits import limits
-from Entity.result import results
 from Services.NormalizationService import normalizeResults
 
 def pdf(pdf_path):
-
-
-    results["sex"]=getGender(pdf_path)
-    results["age"]=getAge(pdf_path)
+    results = {
+        "name": "N/A",
+        "sex": getGender(pdf_path),
+        "age": getAge(pdf_path),
+        "reportedOn": "N/A",
+        "tests": []
+    }
 
     for test in parameters:
         result = {}
