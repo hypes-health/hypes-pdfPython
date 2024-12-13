@@ -13,7 +13,7 @@ def pdf(pdf_path):
         "reportedOn": "N/A",
         "tests": []
     }
-
+    testParameters=[]
     for test in parameters:
         result = {}
         for key in parameters[test]["parameters"]:
@@ -32,7 +32,8 @@ def pdf(pdf_path):
                 "result": result[key],
                 "remarks": None
             })
-        results["tests"].append(result_temp)
+        testParameters.append(result_temp)
+    results["tests"] = testParameters
     normalizeResults(results)
     if results["sex"]== 'M':
         results["sex"]="Male"
