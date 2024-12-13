@@ -25,4 +25,6 @@ def pdf(pdf_path):
             parameters[test]["parameters"],
             parameters[test]["pages"])
     normalizeResults(results)
+    for key in results['parameters']:
+        print(key)
     return results

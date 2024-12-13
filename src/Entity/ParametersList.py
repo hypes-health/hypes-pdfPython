@@ -38,18 +38,22 @@ parameters={
         }
     },
     "Thyroid Function Test":{
-        "pages":2,
+        "pages":4,
         "names":[
             "Thyroid Function Test","TFT"
         ],
         "parameters":{
             "Triiodothyronine":["T3","Triiodothyronine"],
             "Thyroxine":["T4","Thyroxine"],
-            "Thyroid Stimulating Hormone":["TSH","Thyroid Stimulating Hormone"]
+            "Thyroid Stimulating Hormone":["TSH","Thyroid Stimulating Hormone"],
+            "Vitamin B12":["Vitamin B12"," Cyanocobalamin"],
+            "Vitamin D":["25-Hydroxy","Vitamin D"],
+            "Testosterone":["Testosterone"],
+            "Cortisol":["Cortisol"]
         }
     },
     "Lipid Profile":{
-        "pages":2,
+        "pages":3,
         "names":[
             "Lipid Profile"
         ],
@@ -63,49 +67,62 @@ parameters={
             "LDL/HDL Ratio":["LDL/HDL","Low-Density Lipoprotein/High","Low-Density Lipoprotein/High Density Lipoprotein"],
             "HDL/LDL Ratio":["HDL/LDL","High-Density Lipoprotein/Low","High-Density Lipoprotein/Low Density Lipoprotein"],
             "CHOL/HDL Ratio":["CHOL/HDL","Cholesterol/High Density"],
+            "CRP":["CRP","C-Reactive Protein"]
         }
     },
     "Kidney Function Test":{
-    "pages":3,
-    "names":[
-      "Kidney Function Test","KFT","BIOCHEMISTRY"
-    ],
-    "parameters":{
-      "Creatinine":["Creatinine"],
-      "BUN/Creatinine Ratio":[ "Creatinine Ratio"],
-      "Urea":["Urea"],
-      "Uric Acid":["Uric Acid"],
-      "Blood Urea Nitrogen":["Blood Urea Nitrogen"],
-      "Calcium":["Calcium"],
-      "Phosphorus":["Phosphorus"],
-      "SGPT":["SGPT"],
-      "SGOT":["SGOT"],
-      "eGFR": ["eGFR", "Estimated Glomerular Filtration", "Filtration"],
-      "Sodium":["Sodium"],
-      "Potassium":["Potassium"],
-      "Chloride":["Chloride"],
-      "Magnesium":["Magnesium"],
-    }
+        "pages":5,
+        "names":[
+          "Kidney Function Test","KFT","BIOCHEMISTRY"
+        ],
+        "parameters":{
+          "Creatinine":["Creatinine"],
+          "BUN/Creatinine Ratio":[ "Creatinine Ratio"],
+          "Urea":["Urea"],
+          "Uric Acid":["Uric Acid"],
+          "Blood Urea Nitrogen":["Blood Urea Nitrogen"],
+          "Calcium":["Calcium"],
+          "Phosphorus":["Phosphorus"],
+          "SGPT":["SGPT"],
+          "SGOT":["SGOT"],
+          "eGFR": ["eGFR", "Estimated Glomerular Filtration", "Filtration"],
+          "Sodium":["Sodium"],
+          "Potassium":["Potassium"],
+          "Chloride":["Chloride"],
+          "Magnesium":["Magnesium"],
+          "LDH":["LDH","Lactate Dehydrogenase"],
+        }
     },
     "Liver Function Test":{
-    "pages":2,
-    "names":[
-      "Liver Function Test","LFT","Protein","Bilirubin"
-    ],
-    "parameters":{
-      "Total Bilirubin":["Bilirubin"],
-      "Conjugated Bilirubin":["Conjugated Bilirubin","Direct"],
-      "Unconjugated Bilirubin":["Unconjugated Bilirubin","Indirect"],
-      "AST":["Aspartate Aminotransferase","AST"],
-      "ALT":["Alanine Transaminase","ALT"],
-      "AST/ALT Ratio":["AST/ALT","Aspartate Aminotransferase/Alanine Transaminase"],
-      "ALP":["Alkaline Phosphatase","ALP"],
-      "GGT":["GGT","Gamma-Glutamyl"],
-      "Protein":["Total Protein","protein"],
-      "Albumin":["Albumin"],
-      "Globulin":["Globulin"],
-      "A/G Ratio":["A/G","Albumin/Globulin"],
+        "pages":2,
+        "names":[
+          "Liver Function Test","LFT","Protein","Bilirubin"
+        ],
+        "parameters":{
+          "Total Bilirubin":["Bilirubin"],
+          "Conjugated Bilirubin":["Conjugated Bilirubin","Direct"],
+          "Unconjugated Bilirubin":["Unconjugated Bilirubin","Indirect"],
+          "AST":["Aspartate Aminotransferase","AST"],
+          "ALT":["Alanine Transaminase","ALT"],
+          "AST/ALT Ratio":["AST/ALT","Aspartate Aminotransferase/Alanine Transaminase"],
+          "ALP":["Alkaline Phosphatase","ALP"],
+          "GGT":["GGT","Gamma-Glutamyl"],
+          "Protein":["Total Protein","protein"],
+          "Albumin":["Albumin"],
+          "Globulin":["Globulin"],
+          "A/G Ratio":["A/G","Albumin/Globulin"],
+        }
+    },
+    "SEROLOGY":{
+        "pages":3,
+        "names":[
+          "SEROLOGY"
+        ],
+        "parameters":{
+          "Rheumatoid Factor":["Rheumatoid Factor","RF"],
+          "Lipoprotein":["Lipoprotein"]
+        }
     }
-    }
+
 
 }

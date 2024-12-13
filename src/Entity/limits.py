@@ -134,6 +134,26 @@ limits = {
         "M": {"lower": 0.4, "upper": 4.0},
         "F": {"lower": 0.4, "upper": 4.0},
     },
+    "Vitamin B12":{
+        "unit": "pg/mL",
+        "M": {"lower": 239, "upper": 931},
+        "F": {"lower": 239, "upper": 931},
+    },
+    "Vitamin D":{
+        "unit": "ng/mL",
+        "M": {"lower": 30, "upper": 100},
+        "F": {"lower": 30, "upper": 100},
+    },
+    "Testosterone":{
+        "unit": "ng/mL",
+        "M": {"lower": 132, "upper": 813},
+        "F": {"lower": 132, "upper": 813},
+    },
+    "Cortisol": {
+        "unit": "µg/dL",
+        "M": {"lower": 4.46, "upper": 22.7},
+        "F": {"lower": 4.46, "upper": 22.7},
+    },
     "Cholesterol": {
         "unit": "mg/dL",
         "M": {"lower": 0, "upper": 200},
@@ -173,6 +193,11 @@ limits = {
         "unit": "ratio",
         "M": {"lower": 0.4, "upper": 0.6},
         "F": {"lower": 0.6, "upper": 0.6},
+    },
+    "CRP":{
+        "unit": "mg/dL",
+        "M": {"lower": 0, "upper": 10},
+        "F": {"lower": 0, "upper": 10},
     },
     "CHOL/HDL Ratio": {
         "unit": "ratio",
@@ -249,6 +274,12 @@ limits = {
         "M": {"lower": 1.6, "upper": 2.3},
         "F": {"lower": 1.6, "upper": 2.3},
     },
+    "LDH": {
+        "unit": "IU/L",
+        "M": {"lower": 120, "upper": 246},
+        "F": {"lower": 120, "upper": 246},
+    },
+
     "Total Bilirubin": {
         "unit": "mg/dL",
         "M": {"lower": 0.2, "upper": 1.2},
@@ -308,5 +339,16 @@ limits = {
         "unit": "ratio",
         "M": {"lower": 1.0, "upper": 2.1},
         "F": {"lower": 1.0, "upper": 2.1},
+    },
+    "Rheumatoid Factor": {
+        "unit": "IU/mL",
+        "M": {"lower": 0, "upper": 14},
+        "F": {"lower": 0, "upper": 14},
+    },
+    "Lipoprotein": {
+        "unit": "mg/dL",
+        "M": {"lower": 0, "upper": 30},
+        "F": {"lower": 0, "upper": 30},
+
     }
 }
