@@ -1,8 +1,6 @@
 import pdfplumber
 import re
 
-from Entity.result import results
-
 def locate_test_page(pdf, test_name):
     test_pattern = re.compile(rf'(?:^|[\s:()\-=\/]){test_name}(?:$|[\s:()\-=\/])', re.IGNORECASE)
     for page_number, page in enumerate(pdf.pages, start=1):
@@ -10,9 +8,8 @@ def locate_test_page(pdf, test_name):
         if test_pattern.search(text):
             return page_number
     return -1
-def getValues(pdf_path, test_name, parameters, page_range):
+def getValues(pdf_path, test_name, parameters, page_range,results):
     with pdfplumber.open(pdf_path) as pdf:
-
         test_page=-1
         for name in test_name:
           test_page = locate_test_page(pdf,name)
@@ -27,13 +24,16 @@ def getValues(pdf_path, test_name, parameters, page_range):
         for page_number in pages_to_search:
             page = pdf.pages[page_number]
             text = page.extract_text()
+
+
             for params in parameters:
-              if results["parameters"][params]["value"] is not None:
+              if results[params] is not None:
                     continue
               for param in parameters[params]:
-                if results["parameters"][params]["value"] is not None:
+                if results[params] is not None:
                     break
                 param_pattern = re.compile(rf'(?:^|[\s:()\-=]){param}(?:$|[\s:()\-=])', re.IGNORECASE)
+
 
                 match = param_pattern.search(text)
                 if match:
@@ -41,5 +41,5 @@ def getValues(pdf_path, test_name, parameters, page_range):
                     value_match = re.search(r'\d+(\.\d+)?', param_text)
                     if value_match:
                         value = re.sub(r'[^\d.]', '', value_match.group())
-                        results["parameters"][params]["value"] = float(value)
+                        results[params] = float(value)
                         break

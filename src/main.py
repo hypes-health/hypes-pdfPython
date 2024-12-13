@@ -1,5 +1,7 @@
+from logging import error
+
 from Controller.routes import pdf
-from flask import Flask,request
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -7,10 +9,19 @@ app = Flask(__name__)
 def hello_world():
     return "Health Okay"
 
-@app.route('/pdf',methods=['GET'])
+@app.route('/pdf',methods=['POST'])
 def pdfProcess():
-    pdf_path=request.args.get('pdf_path')
-    return pdf(pdf_path)
+    try:
+        if len(request.files.keys()):
+            key="pdf"
+            for name in request.files:
+                key=name
+                break
+            file = request.files[key].stream
+            return pdf(file)
+    except Exception as e:
+        error(e)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

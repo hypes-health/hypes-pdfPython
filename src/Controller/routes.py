@@ -9,22 +9,31 @@ from Services.NormalizationService import normalizeResults
 def pdf(pdf_path):
 
 
-    results["gender"]=getGender(pdf_path)
+    results["sex"]=getGender(pdf_path)
     results["age"]=getAge(pdf_path)
+
     for test in parameters:
+        result = {}
         for key in parameters[test]["parameters"]:
-            results["parameters"][key]={
-                "value":None,
-                "upperLimit":limits[key][results["gender"]]["upper"],
-                "lowerLimit":limits[key][results["gender"]]["lower"],
-                "unit":limits[key]["unit"]
-            }
-    for test in parameters:
+            result[key]=None
         getValues(
             pdf_path, parameters[test]["names"],
             parameters[test]["parameters"],
-            parameters[test]["pages"])
+            parameters[test]["pages"],result)
+        result_temp={"name": test, "parameters": []}
+        for key in parameters[test]["parameters"]:
+            result_temp["parameters"].append({
+                "name":key,
+                "unit": limits[key]["unit"],
+                "upperLimit": limits[key][results["sex"]]["upper"],
+                "lowerLimit": limits[key][results["sex"]]["lower"],
+                "result": result[key],
+                "remarks": None
+            })
+        results["tests"].append(result_temp)
     normalizeResults(results)
-    for key in results['parameters']:
-        print(key)
+    if results["sex"]== 'M':
+        results["sex"]="Male"
+    else:
+        results["sex"]="Female"
     return results

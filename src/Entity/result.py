@@ -1,12 +1,14 @@
 results = {
-        "gender": "M",
+        "name":"N/A",
+        "sex": "M",
         "age": 20,
-        "parameters": {
+        "reportedOn": "N/A",
+        "tests": [
             # "WBC":{
             #     "value":something,
             #     "lowerLimit":something,
             #     "upperLimit":something,
             #     "unit":something
             # }
-        }
+        ]
     }
