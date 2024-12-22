@@ -6,7 +6,7 @@ import json
 import ast
 import pandas as pd
 client = OpenAI(
-    api_key="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"
+    api_key="<API-KEY>"
 )
 def gooo(pdf_path):
   ans='{}'
