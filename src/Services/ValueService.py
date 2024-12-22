@@ -22,10 +22,10 @@ def getValues(pdf_path, test_name, parameters, page_range,results):
         max_pages = len(pdf.pages)
         pages_to_search = range(test_page-1,min(test_page- 1+page_range,max_pages))
         for page_number in pages_to_search:
+
             page = pdf.pages[page_number]
             text = page.extract_text()
-
-
+            # print(f'text')
             for params in parameters:
               if results[params] is not None:
                     continue

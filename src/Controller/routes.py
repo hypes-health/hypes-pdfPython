@@ -8,8 +8,8 @@ from Services.NormalizationService import normalizeResults
 def pdf(pdf_path):
     results = {
         "name": "N/A",
-        "sex": getGender(pdf_path),
-        "age": getAge(pdf_path),
+        "sex": "M",#getGender(pdf_path),
+        "age": "N/A",#getAge(pdf_path),
         "reportedOn": "N/A",
         "tests": []
     }
@@ -18,10 +18,11 @@ def pdf(pdf_path):
         result = {}
         for key in parameters[test]["parameters"]:
             result[key]=None
-        getValues(
-            pdf_path, parameters[test]["names"],
-            parameters[test]["parameters"],
-            parameters[test]["pages"],result)
+            print(f'"{key}",')
+        # getValues(
+        #     pdf_path, parameters[test]["names"],
+        #     parameters[test]["parameters"],
+        #     parameters[test]["pages"],result)
         result_temp={"name": test, "parameters": []}
         for key in parameters[test]["parameters"]:
             result_temp["parameters"].append({

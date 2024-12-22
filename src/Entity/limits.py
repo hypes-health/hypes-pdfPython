@@ -79,27 +79,27 @@ limits = {
         "M": {"lower": 0, "upper": 15},
         "F": {"lower": 0, "upper": 20},
     },
-    "ANC": {
+    "Absolute Neutrophils count": {
         "unit": "cells/mcL",
         "M": {"lower": 2000, "upper": 7000},
         "F": {"lower": 2000, "upper": 7000},
     },
-    "ALC": {
+    "Absolute Lymphocytes count": {
         "unit": "cells/mcL",
         "M": {"lower": 1000, "upper": 4800},
         "F": {"lower": 1000, "upper": 4800},
     },
-    "AMC": {
+    "Absolute Monocytes count": {
         "unit": "cells/mcL",
         "M": {"lower": 200, "upper": 800},
         "F": {"lower": 200, "upper": 800},
     },
-    "AEC": {
+    "Absolute Eosinophils count": {
         "unit": "cells/mcL",
         "M": {"lower": 0, "upper": 500},
         "F": {"lower": 0, "upper": 500},
     },
-    "ABC": {
+    "Absolute Basophils count": {
         "unit": "cells/mcL",
         "M": {"lower": 0, "upper": 100},
         "F": {"lower": 0, "upper": 100},
