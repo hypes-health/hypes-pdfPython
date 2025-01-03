@@ -474,6 +474,12 @@ limits = {
         "M": {"lower": 2000, "upper": 7000},
         "F": {"lower": 2000, "upper": 7000},
     },
+    "Red Blood Cell (RBC) Count": {
+        "unit": "million/μL",
+        "M": {"lower": 4.7, "upper": 6.1},
+        "F": {"lower": 4.2, "upper": 5.4}
+    },
+
     "Absolute Lymphocytes count": {
         "unit": "cells/mcL",
         "M": {"lower": 1000, "upper": 4800},

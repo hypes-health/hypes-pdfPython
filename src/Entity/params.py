@@ -1,4 +1,8 @@
 prms={
+      "name",
+      "age",
+      "gender",
+      "reportedOn"
       "LDL/HDL Ratio",
       "HDL Cholesterol",
       "LDL Particle Number",
@@ -91,7 +95,6 @@ prms={
       "Hemoglobin",
       "Mean Platelet Volume (MPV)",
       "Carbon Dioxide (CO2)",
-      "Magnesium, RBC",
       "Phosphorus",
       "Bilirubin",
       "Conjugated Bilirubin",
@@ -118,10 +121,7 @@ prms={
       "HDL/LDL Ratio",
       "VLDL",
       "Vitamin B12",
-      "name",
-      "age",
-      "gender",
-      "reportedOn"
+
 }
 prmss={"Name",
 "Age",
