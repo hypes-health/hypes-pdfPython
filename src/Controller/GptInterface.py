@@ -2,7 +2,7 @@ from openai import OpenAI
 from Entity.params import prms
 from Entity.params import prmss
 client = OpenAI(
-        api_key="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"
+        api_key="<API-KEY>"
     )
 def Gpt(message):
     try:
