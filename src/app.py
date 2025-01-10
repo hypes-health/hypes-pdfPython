@@ -1,9 +1,8 @@
 from logging import error
-from docx import Document
+
 from Controller.routes import pdf
 from flask import Flask, request
-import json
-# from OCR.OCR import
+
 app = Flask(__name__)
 
 @app.route('/health-check',methods=['GET'])
@@ -21,6 +20,8 @@ def pdfProcess():
             return pdf(file)
     except Exception as e:
         error(e)
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
