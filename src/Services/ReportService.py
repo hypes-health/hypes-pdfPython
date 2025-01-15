@@ -6,8 +6,7 @@ import json
 import ast
 import pandas as pd
 client = OpenAI(
-    api_key="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"
-)
+    api_key="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")
 def ExtractReport(pdf_path):
   ans='{}'
   ans=json.loads(ans)
@@ -17,6 +16,9 @@ def ExtractReport(pdf_path):
       page=pdf.pages[pgno]
       text=text+page.extract_text()
     try:
+
+      response = completion.choices[0].message.content
+      print(response)
       completion = client.chat.completions.create(
         model="chatgpt-4o-latest",
         messages=[
